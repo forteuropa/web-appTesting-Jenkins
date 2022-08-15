@@ -10,7 +10,7 @@ node {
     stage('Build image') {
         /* This builds the actual image */
 
-        app = docker.build("forteu/web-app")
+        app = docker.build("forteuropaa/web-app")
     }
     stage('Push image') {
       
