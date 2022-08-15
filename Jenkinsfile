@@ -1,7 +1,7 @@
 node {
     checkout scm
 
-    def customImage = docker.build("my-image:${env.BUILD_ID}")
+    def customImage = docker.build("weba-app:${env.forteu}")
 
     customImage.inside {
         sh 'make test'
