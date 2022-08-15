@@ -1,23 +1,22 @@
 node {
     def app
 
+    stage('Clone repository') {
+        /* Cloning the Repository to our Workspace */
 
-    stage('Clone repository'){
-
-    	checkout scm 
+        checkout scm
     }
-    
 
     stage('Build image') {
         /* This builds the actual image */
 
         app = docker.build("forteu/web-app")
     }
-  
-   stage('Test imgae'){
-    
-   app.inside{
-	echo "App is running" 
-	}
 
-  }
+    stage('Test image') {
+        
+        app.inside {
+            echo "Tests passed"
+        }
+    }
+}
