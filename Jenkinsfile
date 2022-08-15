@@ -2,7 +2,10 @@ node {
     def app
 
 
-    checkout scm
+    stage('Clone repository'){
+
+    	checkout scm 
+    }
     }
 
     stage('Build image') {
@@ -10,3 +13,11 @@ node {
 
         app = docker.build("forteu/web-app")
     }
+  
+   stage('Test imgae'){
+    
+   app.inside{
+	echo "App is running" 
+	}
+
+  }
