@@ -1,9 +1,12 @@
 node {
+    def app
+
+
     checkout scm
-
-    def customImage = docker.build("weba-app:${env.forteu}")
-
-    customImage.inside {
-        sh 'make test'
     }
-}
+
+    stage('Build image') {
+        /* This builds the actual image */
+
+        app = docker.build("anandr72/nodeapp")
+    }
