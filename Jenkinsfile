@@ -3,7 +3,7 @@ node {
 
     stage('Clone repository') {
 
-        /*11aa Cloning the Repository to our Workspace */
+        / Cloning the Repository to our Workspace */
 
         checkout scm
     }
