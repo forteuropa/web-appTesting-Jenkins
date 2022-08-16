@@ -2,10 +2,6 @@ FROM node:16
 
 
 
-
-#testttttt
-
-
 # Create app directory
 WORKDIR /usr/src/app
 
