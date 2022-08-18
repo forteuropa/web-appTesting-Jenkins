@@ -7,7 +7,7 @@ using namespace std;
 
 int main(){
 
-	cout << "Not working anymore 1 " << endl;
+	cout << "Not working anymore 2	" << endl;
 
 return 0;
 }
